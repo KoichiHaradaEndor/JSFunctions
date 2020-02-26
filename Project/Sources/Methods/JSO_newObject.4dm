@@ -1,8 +1,7 @@
-//%attributes = {}
+//%attributes = {"invisible":true,"preemptive":"capable"}
   //**
   //* This method creates and returns JSObject object.
   //* 
-  //* @constructor
   //* @author: HARADA Koichi
   //* @return {Object}
   //*/
