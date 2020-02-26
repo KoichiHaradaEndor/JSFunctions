@@ -1,4 +1,4 @@
-//%attributes = {"invisible":true,"shared":true}
+//%attributes = {"invisible":true,"shared":true,"preemptive":"capable"}
   //**
   //* This method creates and returns JSNumber object.
   //* 
