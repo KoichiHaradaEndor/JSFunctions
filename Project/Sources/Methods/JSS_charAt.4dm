@@ -17,6 +17,8 @@ $result_t:=""
 Case of 
 	: ($index_l<0)
 		
+	: (Undefined:C82(This:C1470.PrimitiveValue))
+		
 	: (Length:C16(This:C1470.PrimitiveValue)<=$index_l)
 		
 	Else 
