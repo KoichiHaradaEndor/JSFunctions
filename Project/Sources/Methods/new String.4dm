@@ -73,9 +73,10 @@ $jss_o.length:=Length:C16($jss_o.PrimitiveValue)
   // Static Methods
 
   // Instance Methods
-  //$jss_o.charAt:=Formula(JSS_charAt)
-  //$jss_o.charCodeAt:=Formula(JSS_charCodeAt)
-  //$jss_o.concat:=Formula(JSS_concat)
-  //$jss_o.endsWith:=Formula(JSS_endsWith)
+$jss_o.charAt:=Formula:C1597(JSS_charAt )
+$jss_o.charCodeAt:=Formula:C1597(JSS_charCodeAt )
+$jss_o.concat:=Formula:C1597(JSS_concat )
+$jss_o.endsWith:=Formula:C1597(JSS_endsWith )
+$jss_o.valueOf:=Formula:C1597(JSS_valueOf )
 
 $0:=$jss_o
