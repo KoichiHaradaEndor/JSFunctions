@@ -1,13 +1,23 @@
 ﻿{
-	"テーブル": {},
-	"デフォルト": {
-		"groups": [
-			"テーブル",
-			"フォーム",
-			"プロジェクトメソッド"
+	"Boolean": {
+		"methods": [
+			"new Boolean"
 		]
 	},
-	"フォーム": {},
-	"プロジェクトメソッド": {},
+	"Number": {
+		"methods": [
+			"new Number"
+		]
+	},
+	"String": {
+		"methods": [
+			"JSS_charAt",
+			"JSS_charCodeAt",
+			"JSS_concat",
+			"JSS_endsWith",
+			"JSS_valueOf",
+			"new String"
+		]
+	},
 	"trash": {}
 }
