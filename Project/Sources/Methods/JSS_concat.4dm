@@ -7,7 +7,9 @@ C_TEXT:C284($result_t)
 
 C_LONGINT:C283($index_l)
 
-$result_t:=This:C1470.PrimitiveValue
+ASSERT:C1129(This:C1470.PrimitiveValue.type="string";"JSString Object may not been initialized correctly.")
+
+$result_t:=This:C1470.valueOf()
 For ($index_l;1;Count parameters:C259)
 	$result_t:=$result_t+${$index_l}
 End for 

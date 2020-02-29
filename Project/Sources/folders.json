@@ -9,6 +9,12 @@
 			"new Number"
 		]
 	},
+	"Object": {
+		"methods": [
+			"JSO_newObject",
+			"JSO_newWrapperObject"
+		]
+	},
 	"String": {
 		"methods": [
 			"JSS_charAt",
