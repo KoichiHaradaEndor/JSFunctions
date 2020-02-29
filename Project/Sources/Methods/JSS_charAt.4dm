@@ -4,7 +4,9 @@
 C_LONGINT:C283($1;$index_l)
 C_OBJECT:C1216($0)
 
-C_TEXT:C284($result_t)
+C_TEXT:C284($value_t;$result_t)
+
+ASSERT:C1129(This:C1470.PrimitiveValue.type="string";"JSString Object may not been initialized correctly.")
 
 If (Count parameters:C259=0)
 	$index_l:=0
@@ -17,13 +19,12 @@ $result_t:=""
 Case of 
 	: ($index_l<0)
 		
-	: (Undefined:C82(This:C1470.PrimitiveValue))
-		
-	: (Length:C16(This:C1470.PrimitiveValue)<=$index_l)
+	: (This:C1470.length<=$index_l)
 		
 	Else 
 		
-		$result_t:=This:C1470.PrimitiveValue[[$index_l+1]]
+		$value_t:=This:C1470.valueOf()
+		$result_t:=$value_t[[$index_l+1]]
 		
 End case 
 

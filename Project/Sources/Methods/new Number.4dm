@@ -10,13 +10,14 @@
 C_VARIANT:C1683($1)
 C_OBJECT:C1216($0;$jsn_o)
 
-$jsn_o:=JSO_newObject 
+$jsn_o:=JSO_newWrapperObject ()
 
-If (Count parameters:C259=0)
-	
-	$jsn_o.PrimitiveValue:=0
-	
-Else 
+ASSERT:C1129(Undefined:C82($jsn_o.PrimitiveValue)=False:C215;"JSWrapperObject may not been initialized correctly.")
+
+$jsn_o.PrimitiveValue.type:="number"
+$jsn_o.PrimitiveValue.value:=0
+
+If (Count parameters:C259>0)
 	
 	$valueType_l:=Value type:C1509($1)
 	
@@ -29,7 +30,7 @@ Else
 			
 		: ($valueType_l=Is null:K8:31)
 			
-			$jsn_o.PrimitiveValue:=Null:C1517
+			$jsn_o.PrimitiveValue.value:=Null:C1517
 			
 		: ($valueType_l=Is object:K8:27)
 			
@@ -39,7 +40,7 @@ Else
 			
 		: ($valueType_l=Is time:K8:8)
 			
-			$jsn_o.PrimitiveValue:=$1+0
+			$jsn_o.PrimitiveValue.value:=$1+0
 			
 		: ($valueType_l=Is undefined:K8:13)
 			
@@ -49,7 +50,7 @@ Else
 			
 		Else   // Boolean, Longint, Real, Text
 			
-			$jsn_o.PrimitiveValue:=Num:C11($1)
+			$jsn_o.PrimitiveValue.value:=Num:C11($1)
 			
 	End case 
 	

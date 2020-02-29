@@ -10,13 +10,14 @@
 C_VARIANT:C1683($1)
 C_OBJECT:C1216($0;$jsb_o)
 
-$jsb_o:=JSO_newObject 
+$jsb_o:=JSO_newWrapperObject ()
 
-If (Count parameters:C259=0)
-	
-	$jsb_o.PrimitiveValue:=False:C215
-	
-Else 
+ASSERT:C1129(Undefined:C82($jsb_o.PrimitiveValue)=False:C215;"JSWrapperObject may not been initialized correctly.")
+
+$jsb_o.PrimitiveValue.type:="boolean"
+$jsb_o.PrimitiveValue.value:=False:C215
+
+If (Count parameters:C259>0)
 	
 	$valueType_l:=Value type:C1509($1)
 	
@@ -25,21 +26,21 @@ Else
 			
 		: ($valueType_l=Is boolean:K8:9)
 			
-			$jsb_o.PrimitiveValue:=$1
+			$jsb_o.PrimitiveValue.value:=$1
 			
 		: ($valueType_l=Is collection:K8:32)
 			
 		: ($valueType_l=Is date:K8:7)
 			
-			$jsb_o.PrimitiveValue:=True:C214
+			$jsb_o.PrimitiveValue.value:=True:C214
 			
 		: ($valueType_l=Is longint:K8:6) | ($valueType_l=Is real:K8:4)
 			
-			$jsb_o.PrimitiveValue:=($1#0)
+			$jsb_o.PrimitiveValue.value:=($1#0)
 			
 		: ($valueType_l=Is null:K8:31)
 			
-			$jsb_o.PrimitiveValue:=False:C215
+			$jsb_o.PrimitiveValue.value:=False:C215
 			
 		: ($valueType_l=Is object:K8:27)
 			
@@ -49,15 +50,15 @@ Else
 			
 		: ($valueType_l=Is text:K8:3)
 			
-			$jsb_o.PrimitiveValue:=($1#"")
+			$jsb_o.PrimitiveValue.value:=($1#"")
 			
 		: ($valueType_l=Is time:K8:8)
 			
-			$jsb_o.PrimitiveValue:=True:C214
+			$jsb_o.PrimitiveValue.value:=True:C214
 			
 		: ($valueType_l=Is undefined:K8:13)
 			
-			$jsb_o.PrimitiveValue:=False:C215
+			$jsb_o.PrimitiveValue.value:=False:C215
 			
 		: ($valueType_l=Is variant:K8:33)
 			

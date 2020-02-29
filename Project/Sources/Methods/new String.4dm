@@ -13,13 +13,14 @@ C_OBJECT:C1216($0;$jss_o)
 C_LONGINT:C283($valueType_l)
 C_TEXT:C284($primitiveValue_t)
 
-$jss_o:=JSO_newObject 
+$jss_o:=JSO_newWrapperObject ()
 
-If (Count parameters:C259=0)
-	
-	$jss_o.PrimitiveValue:=""
-	
-Else 
+ASSERT:C1129(Undefined:C82($jss_o.PrimitiveValue)=False:C215;"JSWrapperObject may not been initialized correctly.")
+
+$jss_o.PrimitiveValue.type:="string"
+$jss_o.PrimitiveValue.value:=""
+
+If (Count parameters:C259>0)
 	
 	$valueType_l:=Value type:C1509($1)
 	
@@ -28,20 +29,20 @@ Else
 			
 		: ($valueType_l=Is collection:K8:32)
 			
-			$jss_o.PrimitiveValue:=$1.join(",")
+			$jss_o.PrimitiveValue.value:=$1.join(",")
 			
 		: ($valueType_l=Is date:K8:7)
 			
 			C_DATE:C307($date_d)
 			$date_d:=$1
 			
-			$jss_o.PrimitiveValue:=String:C10(Year of:C25($date_d);"0000")+"-"+\
+			$jss_o.PrimitiveValue.value:=String:C10(Year of:C25($date_d);"0000")+"-"+\
 				String:C10(Month of:C24($date_d);"00")+"-"+\
 				String:C10(Day of:C23($date_d);"00")+"T00:00:00.000Z"
 			
 		: ($valueType_l=Is null:K8:31)
 			
-			$jss_o.PrimitiveValue:=Null:C1517
+			$jss_o.PrimitiveValue.value:=Null:C1517
 			
 		: ($valueType_l=Is object:K8:27)
 			
@@ -51,7 +52,7 @@ Else
 			
 		: ($valueType_l=Is time:K8:8)
 			
-			$jss_o.PrimitiveValue:=String:C10($1;ISO time:K7:8)
+			$jss_o.PrimitiveValue.value:=String:C10($1;ISO time:K7:8)
 			
 		: ($valueType_l=Is undefined:K8:13)
 			
@@ -61,14 +62,14 @@ Else
 			
 		Else   // Boolean, Longint, Real, Text
 			
-			$jss_o.PrimitiveValue:=String:C10($1)
+			$jss_o.PrimitiveValue.value:=String:C10($1)
 			
 	End case 
 	
 End if 
 
   // Properties
-$jss_o.length:=Length:C16($jss_o.PrimitiveValue)
+$jss_o.length:=Length:C16($jss_o.PrimitiveValue.value)
 
   // Static Methods
 
