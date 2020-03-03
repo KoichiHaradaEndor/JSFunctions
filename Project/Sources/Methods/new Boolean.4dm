@@ -74,6 +74,7 @@ End if
 
   // Static Methods
 
-  // Object Methods
+  // Instance Methods
+$jsb_o.valueOf:=Formula:C1597(JSB_valueOf )
 
 $0:=$jsb_o
