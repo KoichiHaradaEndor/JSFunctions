@@ -40,7 +40,8 @@
 		"methods": [
 			"Test_JSS_charAt",
 			"Test_JSS_charCodeAt",
-			"Test_JSS_concat"
+			"Test_JSS_concat",
+			"Test_JSS_endsWith"
 		]
 	},
 	"trash": {}
