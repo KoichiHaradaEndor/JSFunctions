@@ -28,12 +28,16 @@
 	"Test": {
 		"groups": [
 			"Test_Boolean",
-			"TEst_Number",
+			"Test_Number",
 			"Test_String"
 		]
 	},
 	"Test_Boolean": {},
-	"TEst_Number": {},
-	"Test_String": {},
+	"Test_Number": {},
+	"Test_String": {
+		"methods": [
+			"Test_JSS_charAt"
+		]
+	},
 	"trash": {}
 }
