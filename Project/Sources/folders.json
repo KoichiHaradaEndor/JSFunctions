@@ -38,7 +38,8 @@
 	"Test_String": {
 		"methods": [
 			"Test_JSS_charAt",
-			"Test_JSS_charCodeAt"
+			"Test_JSS_charCodeAt",
+			"Test_JSS_concat"
 		]
 	},
 	"trash": {}
