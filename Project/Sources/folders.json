@@ -25,5 +25,15 @@
 			"new String"
 		]
 	},
+	"Test": {
+		"groups": [
+			"Test_Boolean",
+			"TEst_Number",
+			"Test_String"
+		]
+	},
+	"Test_Boolean": {},
+	"TEst_Number": {},
+	"Test_String": {},
 	"trash": {}
 }
