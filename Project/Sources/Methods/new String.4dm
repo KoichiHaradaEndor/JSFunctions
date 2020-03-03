@@ -42,7 +42,7 @@ If (Count parameters:C259>0)
 			
 		: ($valueType_l=Is null:K8:31)
 			
-			$jss_o.PrimitiveValue.value:=Null:C1517
+			$jss_o.PrimitiveValue.value:="null"
 			
 		: ($valueType_l=Is object:K8:27)
 			
