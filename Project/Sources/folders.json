@@ -37,7 +37,8 @@
 	"Test_Number": {},
 	"Test_String": {
 		"methods": [
-			"Test_JSS_charAt"
+			"Test_JSS_charAt",
+			"Test_JSS_charCodeAt"
 		]
 	},
 	"trash": {}
