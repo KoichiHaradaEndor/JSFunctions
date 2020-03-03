@@ -60,6 +60,7 @@ End if
 
   // Static Methods
 
-  // Object Methods
+  // Instance Methods
+$jsn_o.valueOf:=Formula:C1597(JSN_valueOf )
 
 $0:=$jsn_o

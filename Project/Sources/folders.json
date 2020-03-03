@@ -6,6 +6,7 @@
 	},
 	"Number": {
 		"methods": [
+			"JSN_valueOf",
 			"new Number"
 		]
 	},
