@@ -1,6 +1,7 @@
 ﻿{
 	"Boolean": {
 		"methods": [
+			"JSB_valueOf",
 			"new Boolean"
 		]
 	},
