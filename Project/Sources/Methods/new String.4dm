@@ -78,10 +78,9 @@ $jss_o.charAt:=Formula:C1597(JSS_charAt )
 $jss_o.charCodeAt:=Formula:C1597(JSS_charCodeAt )
 $jss_o.concat:=Formula:C1597(JSS_concat )
 $jss_o.endsWith:=Formula:C1597(JSS_endsWith )
-
+$jss_o.includes:=Formula:C1597(JSS_includes )
 $jss_o.indexOf:=Formula:C1597(JSS_indexOf )
 
 $jss_o.valueOf:=Formula:C1597(JSS_valueOf )
-
 
 $0:=$jss_o
