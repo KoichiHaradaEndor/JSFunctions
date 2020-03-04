@@ -39,8 +39,9 @@ If ($searchValue_t="")
 Else 
 	
 	Case of 
-		: ($fromIndex_l<=0)
-			  // for index value equals to or less than 0, the search starts at index 0.
+		: ($fromIndex_l<0)
+			  // for index value less than 0, the search starts at index 0.
+			$fromIndex_l:=0
 			
 		: ($fromIndex_l>$length_l)
 			  // for index value greater than the length of the string, the search starts at the length.
