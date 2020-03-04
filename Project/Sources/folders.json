@@ -34,6 +34,9 @@
 			"Test_Boolean",
 			"Test_Number",
 			"Test_String"
+		],
+		"methods": [
+			"Test_run"
 		]
 	},
 	"Test_Boolean": {},
