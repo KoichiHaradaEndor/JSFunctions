@@ -23,6 +23,7 @@
 			"JSS_charCodeAt",
 			"JSS_concat",
 			"JSS_endsWith",
+			"JSS_indexOf",
 			"JSS_valueOf",
 			"new String"
 		]
@@ -41,7 +42,8 @@
 			"Test_JSS_charAt",
 			"Test_JSS_charCodeAt",
 			"Test_JSS_concat",
-			"Test_JSS_endsWith"
+			"Test_JSS_endsWith",
+			"Test_JSS_indexOf"
 		]
 	},
 	"trash": {}
