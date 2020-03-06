@@ -20,9 +20,15 @@ $value_t:=This:C1470.valueOf()
 $length_l:=This:C1470.length
 
 If (Count parameters:C259>1)
+	
 	$fromIndex_l:=$2
+	
+	  // when second parameter (fromIndex) is passed, 
+	  // the TEXT is used only from the first character to fromIndex plus the length of the pattern.
+	$value_t:=Substring:C12($value_t;1;$2+Length:C16($searchValue_t))
+	
 Else 
-	$fromIndex_l:=$length_l
+	$fromIndex_l:=0
 End if 
 
 If ($searchValue_t="")

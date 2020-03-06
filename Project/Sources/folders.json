@@ -50,7 +50,7 @@
 			"Test_JSS_endsWith",
 			"Test_JSS_includes",
 			"Test_JSS_indexOf",
-			"Test_JSS_lastIndesOf"
+			"Test_JSS_lastIndexOf"
 		]
 	},
 	"trash": {}
