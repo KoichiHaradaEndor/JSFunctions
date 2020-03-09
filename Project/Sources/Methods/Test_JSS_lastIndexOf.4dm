@@ -1,6 +1,9 @@
 //%attributes = {"invisible":true}
 C_OBJECT:C1216($s)
 
+$s:=new String ("AAAXABAABBCAC")
+ASSERT:C1129($s.lastIndexOf("ABBC").valueOf()=7;"Error in test case 1")
+
 $s:=new String ("Brave new world")
 ASSERT:C1129($s.lastIndexOf("w").valueOf()=10;"Error in test case 1")
 ASSERT:C1129($s.lastIndexOf("new").valueOf()=6;"Error in test case 2")
@@ -17,5 +20,3 @@ ASSERT:C1129($s.lastIndexOf("";2).valueOf()=2;"Error in test case 10")
 
 $s:=new String ("abab")
 ASSERT:C1129($s.lastIndexOf("ab";2).valueOf()=2;"Error in test case 11")
-
-ALERT:C41("Done")
