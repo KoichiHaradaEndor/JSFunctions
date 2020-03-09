@@ -25,6 +25,7 @@
 			"JSS_endsWith",
 			"JSS_includes",
 			"JSS_indexOf",
+			"JSS_lastIndexOf",
 			"JSS_valueOf",
 			"new String"
 		]
@@ -48,7 +49,8 @@
 			"Test_JSS_concat",
 			"Test_JSS_endsWith",
 			"Test_JSS_includes",
-			"Test_JSS_indexOf"
+			"Test_JSS_indexOf",
+			"Test_JSS_lastIndexOf"
 		]
 	},
 	"trash": {}
