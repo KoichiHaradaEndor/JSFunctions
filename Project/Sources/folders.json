@@ -5,6 +5,11 @@
 			"new Boolean"
 		]
 	},
+	"Global": {
+		"methods": [
+			"encodeURIComponent"
+		]
+	},
 	"Number": {
 		"methods": [
 			"JSN_valueOf",
@@ -33,6 +38,7 @@
 	"Test": {
 		"groups": [
 			"Test_Boolean",
+			"Test_Global",
 			"Test_Number",
 			"Test_String"
 		],
@@ -41,6 +47,11 @@
 		]
 	},
 	"Test_Boolean": {},
+	"Test_Global": {
+		"methods": [
+			"Test_encodeURIComponent"
+		]
+	},
 	"Test_Number": {},
 	"Test_String": {
 		"methods": [
